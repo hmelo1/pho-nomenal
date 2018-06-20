@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import './App.css';
 import { Navigation } from './components/Navigation'
 
+import { Display } from './components/Display'
+
 class App extends Component {
   componentDidMount() {
     window.fetch('api/recipes')
@@ -17,6 +19,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navigation />
+          <Display />
         </div>
       </Router>
     );
