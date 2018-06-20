@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import './App.css';
 import { Navigation } from './components/Navigation'
 
-import { Display } from './components/Display'
+import { Landing } from './components/Landing'
 
 class App extends Component {
   componentDidMount() {
@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navigation />
-          <Display />
+          <Landing />
         </div>
       </Router>
     );

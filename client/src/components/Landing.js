@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap'
 import { Sidebar } from './Sidebar'
 
-export const Display = () => {
+export const Landing = () => {
   return (
     <Grid>
       <Row>
