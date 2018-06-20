@@ -18,7 +18,7 @@ pho1 = Recipe.create(
   meal_type: "Special",
   main_ingredient: "Beef"
 )
-soup, appetizer, beverages, sandwiches
+#soup, appetizer, beverages, sandwiches
 pho1.ingredients.create(description: "5 pounds beef knuckle")
 pho1.ingredients.create(description: "2 pounds beef oxtail")
 pho1.ingredients.create(description: "1 daikon, sliced")
@@ -33,11 +33,6 @@ pho1.ingredients.create(description: "1 tablespoon salt")
 pho1.ingredients.create(description: "1 tablespoon fish sauce")
 pho1.ingredients.create(description: "1.5 pounds dried flat rice noodles")
 pho1.ingredients.create(description: ".5 pound frozen beef sirloin")
-
-
-
-
-
 summerRolls = Recipe.create(
   title: "Goi Cuon",
   description: "Delicious, fresh summer rolls!",
@@ -46,7 +41,7 @@ summerRolls = Recipe.create(
     In a small bowl, mix the fish sauce, water, lime juice, garlic, sugar and chili sauce.
     In another small bowl, mix the hoisin sauce and peanuts.
     Serve rolled spring rolls with the fish sauce and hoisin sauce mixtures.",
-  source: "https://www.allrecipes.com/recipe/24239/vietnamese-fresh-spring-rolls/"
+  source: "https://www.allrecipes.com/recipe/24239/vietnamese-fresh-spring-rolls/",
   meal_type: "Appetizer",
   main_ingredient: "Shrimp"
 )
