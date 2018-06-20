@@ -8,5 +8,4 @@ export function configureStore(){
 }
 
 export const store = configureStore()
-
-//export const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
+ 
