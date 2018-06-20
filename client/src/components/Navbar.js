@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
-    <nav className ="navbar navbar-default">
+    <nav className="blue-grey darken-4">
       <div className="nav-wrapper">
-        <Link to ="/"> Hello!</Link>
+        <Link to ="/" className="brand-logo center"> PHO-NOMINAL!</Link>
       </div>
     </nav>
   )
