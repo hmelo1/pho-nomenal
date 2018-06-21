@@ -1,7 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Row, Col } from 'react-bootstrap'
-import { Sidebar } from './Sidebar'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { Grid, Row, Col } from 'react-bootstrap';
+
+import { Sidebar } from './Sidebar';
+import { Display } from './Display';
+
+
 
 export const Landing = () => {
   return (
@@ -11,7 +18,7 @@ export const Landing = () => {
           <Sidebar />
         </Col>
         <Col lg={9}>
-          Testing2
+            <Display />
         </Col>
       </Row>
     </Grid>

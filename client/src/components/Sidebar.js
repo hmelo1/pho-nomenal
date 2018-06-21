@@ -17,16 +17,16 @@ export const Sidebar = () => {
             <Link to ="/breakfast" className="btn btn-primary btn-block">Breakfast</Link>
           </li>
           <li>
-            <Link to ="/breakfast" className="btn btn-primary btn-block">Lunch</Link>
+            <Link to ="/lunch" className="btn btn-primary btn-block">Lunch</Link>
           </li>
           <li>
-            <Link to ="/breakfast" className="btn btn-primary btn-block">Dinner</Link>
+            <Link to ="/dinner" className="btn btn-primary btn-block">Dinner</Link>
           </li>
           <li>
-            <Link to ="/breakfast" className="btn btn-primary btn-block">Specials</Link>
+            <Link to ="/specials" className="btn btn-primary btn-block">Specials</Link>
           </li>
           <li>
-            <Link to ="/breakfast" className="btn btn-danger btn-block">BBeveragesreakfast</Link>
+            <Link to ="/beverages" className="btn btn-danger btn-block">Beverages</Link>
           </li>
         </ul>
       </div>
