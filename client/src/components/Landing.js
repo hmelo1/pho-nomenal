@@ -25,14 +25,24 @@ export const Landing = () => {
   )
 }*/
 
-class Landing extends React.Component {
-  componentDidMount() {
-    window.fetch('api/recipes')
-      .then(response => response.json())
-      .then(json => console.log(json))
-      .catch(error => console.log(error))
-  }
+/*
+window.fetch('api/recipes')
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(error => console.log(error))
+}
 
+if (this.props.recipes.length == 0){
+  this.props.actions.fetchRecipes()
+}
+*/
+
+class Landing extends React.Component {
+
+  componentDidMount() {
+    console.log(this.props)
+    console.log(this.props.actions.fetchRecipes())
+  }
   render(){
     return (
       <Grid>
