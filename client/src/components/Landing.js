@@ -39,10 +39,21 @@ if (this.props.recipes.length == 0){
 
 class Landing extends React.Component {
 
-  componentDidMount() {
-    console.log(this.props)
-    console.log(this.props.actions.fetchRecipes())
+  constructor(props){
+    super(props)
+    this.state = {recipes: []}
   }
+
+
+  componentDidMount() {
+    console.log(store.getState())
+    this.setState({
+      recipes: this.props.actions.fetchRecipes(),
+    })
+    console.log(this.state.recipes)
+  }
+
+
   render(){
     return (
       <Grid>
@@ -51,7 +62,8 @@ class Landing extends React.Component {
             <Sidebar />
           </Col>
           <Col lg={9}>
-              <Display />
+              <Display
+                recipes={this.state.recipes}/>
           </Col>
         </Row>
       </Grid>
