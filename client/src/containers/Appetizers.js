@@ -1,29 +1,31 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-
+import { bindActionCreators } from 'redux';
+import * as recipeActions from '../actions/recipeActions'
+import RecipeList from './RecipeList'
 
 class Appetizers extends Component {
   componentDidMount() {
-    console.log("Appetizers")
-    console.log(this.props)
+    console.log("appetizers has mounted.")
+    this.props.actions.fetchAppetizers()
   }
+
   render(){
+    const { recipes } = this.props;
     return (
-      <div>
-        <ul>
-          <li>
-            Testing!
-          </li>
-          <li>
-            Appetizers!
-          </li>
-          <li>
-            Testing!
-          </li>
-        </ul>
+      <div className="row">
+        <RecipeList recipes={recipes} />
       </div>
     )
   }
 }
 
-export default Appetizers;
+function mapStateToProps(state, ownProps){
+  return {recipes: state.recipes}
+}
+
+function mapDispatchToProps(dispatch){
+  return {actions: bindActionCreators(recipeActions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Appetizers);
