@@ -1,6 +1,6 @@
 class RecipesController < ApiController
   def index
-    @recipes = Recipe.select("id, title").all
+    @recipes = Recipe.all
     render json: @recipes.to_json
   end
 
