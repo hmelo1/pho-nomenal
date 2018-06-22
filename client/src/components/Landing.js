@@ -39,21 +39,6 @@ if (this.props.recipes.length == 0){
 
 class Landing extends React.Component {
 
-  constructor(props){
-    super(props)
-    this.state = {recipes: []}
-  }
-
-
-  componentDidMount() {
-    console.log(store.getState())
-    this.setState({
-      recipes: this.props.actions.fetchRecipes(),
-    })
-    console.log(this.state.recipes)
-  }
-
-
   render(){
     return (
       <Grid>
@@ -62,8 +47,7 @@ class Landing extends React.Component {
             <Sidebar />
           </Col>
           <Col lg={9}>
-              <Display
-                recipes={this.state.recipes}/>
+              <Display />
           </Col>
         </Row>
       </Grid>
@@ -71,16 +55,7 @@ class Landing extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps){
-  return {recipes: state.recipes}
-}
-
-function mapDispatchToProps(dispatch){
-  return {actions: bindActionCreators(recipeActions, dispatch)}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Landing);
-
+export default Landing;
 /*
 componentDidMount() {
   window.fetch('api/recipes')
