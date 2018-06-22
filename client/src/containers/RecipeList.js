@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Grid, Row, Col, Modal } from 'react-bootstrap'
+import { Grid, Col } from 'react-bootstrap'
 
 class RecipeList extends Component {
   render(){
