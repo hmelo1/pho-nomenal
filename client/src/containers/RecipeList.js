@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 class RecipeList extends Component {
-  componentDidMount() {
-    console.log("Recipes List has mounted.")
-  }
   render(){
-    console.log(this.props)
+    const { recipes } = this.props
+    let recipesList = recipes.map((recipe, index) => <li key={index}>{recipe.title}</li>)
     return (
       <ul>
-
+        {recipesList}
       </ul>
     )
   }

@@ -12,7 +12,6 @@ class Meals extends Component {
 
   render(){
     const { recipes } = this.props;
-    console.log(recipes)
     return (
       <div>
         <RecipeList recipes={recipes} />
