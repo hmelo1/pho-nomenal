@@ -53,3 +53,16 @@ summerRolls.ingredients.create(description: "3 tablespoons chopped fresh mint le
 summerRolls.ingredients.create(description: "3 tablespoons chopped fresh cilantro")
 summerRolls.ingredients.create(description: "2 leaves lettuce")
 summerRolls.ingredients.create(description: "2 teaspoons fish sauce")
+
+coffee = Recipe.create(
+  title: "Ca phe Sua Da",
+  description: "Vietnamese Iced Coffee!",
+  steps: "Brew coffee with water using your preferred method to make brewed coffee. Spoon 2 tablespoons of sweetened condensed milk into each of 4 coffee cups. Pour 1 cup of fresh hot coffee into each cup, and stir to dissolve the milk.
+Serve guests cups of coffee, and give each one a tall glass with 4 ice cubes, and a long handled spoon. Guests pour hot coffee over the ice cubes and stir briskly with the long handled spoon, making an agreeable clatter with the ice cubes to chill the coffee.".
+meal_type: "Beverages",
+main_ingredient: "Coffee"
+)
+
+coffee.ingredients.create(description: "Dark Roast coffee")
+coffee.ingredients.create(description: "Iced Cubes")
+coffee.ingredients.create(description: "Sweetended Condensed Milk")
