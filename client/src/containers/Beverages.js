@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 
-class Breakfast extends Component {
+class Beverages extends Component {
   componentDidMount() {
-    console.log("Breakfasts")
+    console.log("Beverages")
     console.log(this.props)
   }
   render(){
@@ -15,7 +15,7 @@ class Breakfast extends Component {
             Testing!
           </li>
           <li>
-            Breakfast!
+            Beverages!
           </li>
           <li>
             Testing!
@@ -26,4 +26,4 @@ class Breakfast extends Component {
   }
 }
 
-export default Breakfast;
+export default Beverages;

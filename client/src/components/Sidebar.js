@@ -14,15 +14,6 @@ export const Sidebar = () => {
             <Link to ="/appetizers" className="btn btn-primary btn-block">Appetizers</Link>
           </li>
           <li>
-            <Link to ="/breakfast" className="btn btn-primary btn-block">Breakfast</Link>
-          </li>
-          <li>
-            <Link to ="/lunch" className="btn btn-primary btn-block">Lunch</Link>
-          </li>
-          <li>
-            <Link to ="/dinner" className="btn btn-primary btn-block">Dinner</Link>
-          </li>
-          <li>
             <Link to ="/specials" className="btn btn-primary btn-block">Specials</Link>
           </li>
           <li>
