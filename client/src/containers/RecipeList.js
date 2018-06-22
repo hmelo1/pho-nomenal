@@ -4,16 +4,21 @@ import { Navbar, Grid, Row, Col, Modal } from 'react-bootstrap'
 class RecipeList extends Component {
   render(){
     const { recipes } = this.props
+    console.log(recipes)
     let recipesList = recipes.map((recipe, index) =>
       <Col sm={3}>
-      <div className="modal-dialog" style={{"width" : "100%"}}>
-        <div className="modal-header">
-          {recipe.title}
+        <div className="modal-dialog" style={{"width" : "100%"}}>
+          <div className="modal-header">
+            {recipe.title}
+          </div>
+          <div className="modal-body">
+            {recipe.description}<br />
+          </div>
+          <div className="modal-body">
+            {recipe.main_ingredient}<br />
+            {recipe.meal_type}
+          </div>
         </div>
-        <div className="modal-body">
-          {recipe.description}
-        </div>
-      </div>
       </Col>
     )
     return (
