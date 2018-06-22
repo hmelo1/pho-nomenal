@@ -8,4 +8,4 @@ class RecipeApi {
   }
 }
 
-export default RecipeApi
+export default RecipeApi;

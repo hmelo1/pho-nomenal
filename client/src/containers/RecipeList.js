@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 class RecipeList extends Component {
   componentDidMount() {
     console.log("Recipes List has mounted.")
-    console.log(this.state)
-    console.log(this.props)
   }
   render(){
+    console.log(this.props)
     return (
-      <div>
-        RecipeList
-      </div>
+      <ul>
+
+      </ul>
     )
   }
 }

@@ -8,7 +8,6 @@ import { Navigation } from './components/Navigation'
 import Landing from './components/Landing'
 
 class App extends Component {
-
   render() {
     return (
       <Router>

@@ -4,10 +4,6 @@ import { bindActionCreators } from 'redux';
 import * as recipeActions from '../actions/recipeActions'
 import RecipeList from './RecipeList'
 
-function mapStateToProps(state, ownProps){
-  return {recipes: state.recipes}
-}
-
 class Meals extends Component {
   componentDidMount() {
     console.log("Meals Display has mounted.")
@@ -16,13 +12,17 @@ class Meals extends Component {
 
   render(){
     const { recipes } = this.props;
-
+    console.log(recipes)
     return (
       <div>
         <RecipeList recipes={recipes} />
       </div>
     )
   }
+}
+
+function mapStateToProps(state, ownProps){
+  return {recipes: state.recipes}
 }
 
 function mapDispatchToProps(dispatch){
