@@ -6,7 +6,7 @@ class RecipeList extends Component {
     const { recipes } = this.props
     console.log(recipes)
     let recipesList = recipes.map((recipe, index) =>
-      <Col sm={3}>
+      <Col sm={3} key={index}>
         <div className="modal-dialog" style={{"width" : "100%"}}>
           <div className="modal-header">
             {recipe.title}
