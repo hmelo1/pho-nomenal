@@ -13,7 +13,7 @@ class Meals extends Component {
   render(){
     const { recipes } = this.props;
     return (
-      <div>
+      <div className="row">
         <RecipeList recipes={recipes} />
       </div>
     )
