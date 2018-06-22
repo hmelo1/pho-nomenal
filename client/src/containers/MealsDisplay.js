@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as recipeActions from '../actions/recipeActions'
+import RecipeList from './RecipeList'
 
 function mapStateToProps(state, ownProps){
   return {recipes: state.recipes}
@@ -14,19 +15,11 @@ class Meals extends Component {
   }
 
   render(){
+    const { recipes } = this.props;
+
     return (
       <div>
-        <ul>
-          <li>
-            Testing!
-          </li>
-          <li>
-            All Meals!
-          </li>
-          <li>
-            Testing!
-          </li>
-        </ul>
+        <RecipeList recipes={recipes} />
       </div>
     )
   }
