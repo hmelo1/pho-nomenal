@@ -6,7 +6,6 @@ import RecipeList from './RecipeList'
 
 class Beverages extends Component {
   componentDidMount() {
-    console.log("Beverages has mounted.")
     this.props.actions.fetchBeverages()
   }
 

@@ -6,7 +6,6 @@ import RecipeList from './RecipeList'
 
 class Specials extends Component {
   componentDidMount() {
-    console.log("Specials has mounted.")
     this.props.actions.fetchSpecials()
   }
 

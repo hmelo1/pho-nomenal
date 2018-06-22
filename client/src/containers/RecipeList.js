@@ -4,7 +4,6 @@ import { Grid, Col } from 'react-bootstrap'
 class RecipeList extends Component {
   render(){
     const { recipes } = this.props
-    console.log(recipes)
     let recipesList = recipes.map((recipe, index) =>
       <Col sm={3} key={index}>
         <div className="modal-dialog" style={{"width" : "100%"}}>
