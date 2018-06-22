@@ -25,6 +25,18 @@ export function fetchAppetizers(){
   }
 }
 
+function fetchSpecialsSuccess(payload) {
+  return {type: types.FETCH_SPECIALS_SUCCESS, payload: payload}
+}
+
+export function fetchSpecials(){
+  return function(dispatch){
+    return recipeApi.fetchRecipes().then(recipesPayload => {
+      dispatch(fetchSpecialsSuccess(recipesPayload))
+    })
+  }
+}
+
 
 /*
 export const FETCH_MEALS_SUCCESS =  'FETCH_MEALS_SUCCESS'
