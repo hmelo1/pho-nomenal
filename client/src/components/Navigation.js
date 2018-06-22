@@ -14,10 +14,10 @@ export const Navigation = () => {
 
       <Nav>
         <NavItem>
-          Testing
+          <Link to ="/"> Menu </Link>
         </NavItem>
         <NavItem>
-          Testing2
+          <Link to ="/location"> Location </Link>
         </NavItem>
       </Nav>
 
