@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Navbar, Grid, Row, Col, Modal } from 'react-bootstrap'
 import Appetizers from '../containers/Appetizers';
 import Specials from '../containers/Specials';
 import Beverages from '../containers/Beverages';
