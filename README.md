@@ -1,24 +1,16 @@
-# README
+# Pho-Nomenal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo[In-Progress]
 
-Things you may want to cover:
+### Description
+Pho-Nomenal is my dream restaurant's menu. It allows user sto view the current menu available.
 
-* Ruby version
+### Technology
 
-* System dependencies
+#### Backend
+ * Ruby on Rails
+  * Used to handle data persistence.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Frontend
+  * React and Redux
+   * Redux used to respond to and modify state changes.
