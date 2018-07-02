@@ -5,7 +5,6 @@ import Specials from '../containers/Specials';
 import Beverages from '../containers/Beverages';
 import MealsDisplay from '../containers/MealsDisplay';
 import Reviews from './Reviews';
-import Location from './Location';
 
 export const Display = () => {
   return (
@@ -15,7 +14,6 @@ export const Display = () => {
       <Route exact path='/specials' component={ Specials } />
       <Route exact path='/beverages' component={ Beverages } />
       <Route exact path='/reviews' component={ Reviews } />
-      <Route exact path='/location' component={ Location } />
     </Switch>
   )
 }

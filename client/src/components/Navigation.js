@@ -17,10 +17,7 @@ export const Navigation = () => {
           <Link to ="/"> Menu </Link>
         </NavItem>
         <NavItem>
-          <Link to ="/location"> Location </Link>
-        </NavItem>
-        <NavItem>
-          <Link to ="/reviews"> Review </Link>
+          <Link to ="/reviews"> Reviews </Link>
         </NavItem>
       </Nav>
       
