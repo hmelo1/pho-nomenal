@@ -15,7 +15,7 @@ class Landing extends React.Component {
             <Sidebar />
           </Col>
           <Col lg={9}>
-              <Display />
+            <Display />
           </Col>
         </Row>
       </Grid>
