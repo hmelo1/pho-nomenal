@@ -19,7 +19,11 @@ export const Navigation = () => {
         <NavItem>
           <Link to ="/location"> Location </Link>
         </NavItem>
+        <NavItem>
+          <Link to ="/reviews"> Review </Link>
+        </NavItem>
       </Nav>
+      
 
     </Navbar>
   )
