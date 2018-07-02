@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import React from 'react';
+import { Field, reduxForm, reset } from 'redux-form';
 
 async function submitToServer(data){
     try{
@@ -18,11 +18,11 @@ async function submitToServer(data){
 }
 
 const submit = ({ user='', review='' }) =>{
-    submitToServer({user, review})
-        .then(data => console.log(data))
+    submitToServer({user, review});
 }
 
-const ReviewsForm = ({ handleSubmit }, {reset}) => {
+const ReviewsForm = (props) => {
+    const { handleSubmit, reset} = props
   return (
     <form onSubmit={handleSubmit(submit)}>
       <div>
@@ -54,6 +54,11 @@ const ReviewsForm = ({ handleSubmit }, {reset}) => {
   )
 }
 
+const afterSubmit = (reseult, dispatch) =>
+dispatch(reset('userReview'));
+
+
 export default reduxForm({
-  form: 'userReview' // a unique identifier for this form
+  form: 'userReview', // a unique identifier for this form
+  onSubmitSuccess: afterSubmit,
 })(ReviewsForm)

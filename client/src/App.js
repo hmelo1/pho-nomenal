@@ -19,10 +19,3 @@ class App extends Component {
 }
 
 export default App;
-/*
-componentDidMount() {
-  window.fetch('api/recipes')
-    .then(response => response.json())
-    .then(json => console.log(json))
-    .catch(error => console.log(error))
-}*/
