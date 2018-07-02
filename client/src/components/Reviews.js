@@ -8,7 +8,7 @@ class Landing extends React.Component {
 
   render(){
     return (
-      <Grid>
+      <Grid bsClass="">
         <Row>
           <Col lg={12}>
             Leave a review!
