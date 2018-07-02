@@ -6,7 +6,7 @@ import ReviewsForm from './ReviewsForm';
 class ReviewDisplay extends Component {
     render(){
         return (
-            <div className="Where am I">
+            <div>
               < ReviewsForm />
               < ReviewsList />
             </div>
