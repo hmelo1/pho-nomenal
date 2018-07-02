@@ -3,7 +3,7 @@ class RecipeApi {
     return fetch('api/recipes').then(response => {
       return response.json()
     }).then(recipesPayload => {
-      return recipesPayload
+      return recipesPayload.recipes
     })
   }
 }
