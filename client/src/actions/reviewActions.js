@@ -7,7 +7,7 @@ function fetchReviewSuccess(payload) {
   
   export function fetchReviews(){
     return function(dispatch){
-      return recipeApi.fetchReviews().then(reviewsPayload => {
+      return reviewApi.fetchReviews().then(reviewsPayload => {
         dispatch(fetchReviewSuccess(reviewsPayload))
       })
     }

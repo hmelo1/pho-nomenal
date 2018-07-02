@@ -1,4 +1,4 @@
-class RecipesController < ApiController
+class ReviewsController < ApiController
     def index
       @reviews = Review.all
       render json: {reviews: @reviews.as_json}

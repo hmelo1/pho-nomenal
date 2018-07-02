@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
 import { Grid, Col } from 'react-bootstrap'
 import Review from './Review';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as reviewActions from '../actions/reviewActions'
 
 class ReviewsList extends Component {
+    componentDidMount() {
+        this.props.actions.fetchReviews()
+      }
+    
     render(){
+        const { reviews } = this.props;
         return (
             <div>
-              < Review author="Eddie"> Awesome! </ Review>
+              < Review reviews={reviews} />
             </div>
         )
     }
 }
 
-export default ReviewsList;
+function mapStateToProps(state, ownProps){
+    return {reviews: state.reviews}
+}
+
+function mapDispatchToProps(dispatch){
+    return {actions: bindActionCreators(reviewActions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewsList);
