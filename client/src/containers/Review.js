@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Grid, Col } from 'react-bootstrap'
-import Review from './Review';
 
-class ReviewsList extends Component {
+class Review extends Component {
     render(){
         return (
             <div>
-              < Review />
+                Awesome!
             </div>
         )
     }
 }
 
-export default ReviewsList;
+export default Review;
