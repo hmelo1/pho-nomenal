@@ -12,6 +12,7 @@ class Landing extends React.Component {
         <Row>
           <Col lg={12}>
             Reviews!
+            < ReviewsList />
           </Col>
         </Row>
       </Grid>

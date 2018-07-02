@@ -8,8 +8,7 @@ class Landing extends React.Component {
     return (
       <Grid>
         <Row>
-
-          <Col lg={9}>
+          <Col lg={12}>
               Location Page!
           </Col>
         </Row>
