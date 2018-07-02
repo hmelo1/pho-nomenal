@@ -66,3 +66,12 @@ coffee = Recipe.create(
 coffee.ingredients.create(description: "Dark Roast coffee")
 coffee.ingredients.create(description: "Iced Cubes")
 coffee.ingredients.create(description: "Sweetended Condensed Milk")
+
+review1 = Review.create(
+  user: "Eddie",
+  review: "Great Place!"
+)
+review2 = Review.create(
+  user: "Thu",
+  review: "Pho-nominal food!"
+)

@@ -1,7 +1,8 @@
 class RecipesController < ApiController
   def index
     @recipes = Recipe.all
-    render json: @recipes.to_json
+    @reviews = Review.all
+    render json: @recipes.to_json(include: @reviews)
   end
 
   def show
