@@ -1,3 +1,4 @@
 export default {
-  recipes: []
+  recipes: [],
+  reviews: []
 }

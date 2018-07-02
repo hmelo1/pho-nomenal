@@ -1,0 +1,14 @@
+import * as types from './actionTypes';
+import reviewApi from './reviewApi'
+
+function fetchReviewSuccess(payload) {
+    return {type: types.FETCH_REVIEWS_SUCCESS, payload: payload}
+  }
+  
+  export function fetchReviews(){
+    return function(dispatch){
+      return recipeApi.fetchReviews().then(reviewsPayload => {
+        dispatch(fetchReviewSuccess(reviewsPayload))
+      })
+    }
+  }
