@@ -4,8 +4,11 @@ import { Grid, Col } from 'react-bootstrap'
 class Review extends Component {
     render(){
         return (
-            <div>
-                Awesome!
+            <div className="Review">
+                <h2 className="ReviewAuthor">
+                    {this.props.author}
+                </h2>
+                {this.props.children}
             </div>
         )
     }

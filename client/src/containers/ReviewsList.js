@@ -6,7 +6,7 @@ class ReviewsList extends Component {
     render(){
         return (
             <div>
-              < Review />
+              < Review author="Eddie"> Awesome! </ Review>
             </div>
         )
     }
