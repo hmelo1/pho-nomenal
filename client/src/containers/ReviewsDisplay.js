@@ -4,10 +4,13 @@ import ReviewsList from './ReviewsList';
 import ReviewsForm from './ReviewsForm';
 
 class ReviewDisplay extends Component {
+    submit = (values) =>{
+        console.log(values)
+    }
     render(){
         return (
             <div>
-              < ReviewsForm />
+              < ReviewsForm onSubmit={ this.submit }/>
               < ReviewsList />
             </div>
         )

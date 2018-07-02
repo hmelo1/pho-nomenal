@@ -35,5 +35,5 @@ const ReviewsForm = props => {
 }
 
 export default reduxForm({
-  form: 'review' // a unique identifier for this form
+  form: 'userReview' // a unique identifier for this form
 })(ReviewsForm)
