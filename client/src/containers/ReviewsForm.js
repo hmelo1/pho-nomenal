@@ -66,24 +66,32 @@ class ReviewsForm extends React.Component{
                         <label>Name</label>
                         <div>
                         <Field
+                            className="form-control col-lg-12"
                             name="user"
                             component="input"
                             type="text"
-                            placeholder="Name"
+                            placeholder="Your Name"
                         />
                         </div>
                     </div>
                     <div>
                         <label>Review</label>
                         <div>
-                        <Field name="review" component="textarea" />
+                        <Field 
+                            className="form-control col-lg-12" 
+                            name="review" 
+                            component="textarea" 
+                            placeholder="Your Review"
+                            rows="10"
+                        />
+                        <br />
                         </div>
                     </div>
                     <div>
-                        <button type="submit">
+                        <button type="submit" className="btn btn-primary btn-lg col-md-6">
                         Submit
                         </button>
-                        <button type="button" onClick={this.props.reset}>
+                        <button type="button" onClick={this.props.reset} className="btn btn-danger btn-lg col-md-6">
                         Clear Values
                         </button>
                     </div>
