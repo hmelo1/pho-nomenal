@@ -1,14 +1,12 @@
 import React from 'react';
 import ReviewsList from './ReviewsList';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as reviewActions from '../actions/reviewActions'
 
 /*
 
-const afterSubmit = (reseult, dispatch) =>
-dispatch(reset('userReview'));
 
 */
 
@@ -105,6 +103,13 @@ function mapDispatchToProps(dispatch){
     return {actions: bindActionCreators(reviewActions, dispatch)}
 }
 
-let myForm = reduxForm({ form: 'userReview'})(ReviewsForm) 
+const afterSubmit = (reseult, dispatch) =>
+dispatch(reset('userReview'));
+
+
+let myForm = reduxForm({ 
+                form: 'userReview',
+                onSubmitSuccess: afterSubmit
+            })(ReviewsForm) 
 
 export default connect(mapStateToProps, mapDispatchToProps)(myForm)
