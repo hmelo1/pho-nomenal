@@ -4,26 +4,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as reviewActions from '../actions/reviewActions'
 
+
 class ReviewsList extends Component {
-    constructor(){
-        super();
-        this.state={
-            reviews: []
-        }
-    }
-    componentDidMount() {
-        this.props.actions.fetchReviews()
-    }
     
-    componentWillReceiveProps(nextProps){
-        if(nextProps.reviews !== this.props.reviews){
-            console.log("Hello?")
-            return { reviews: nextProps.reviews}
-        }
-    }
+/*
+    componentWillUpdate(nextProps, nextState){
+        console.log("Component will update")
+        console.log(nextProps)
+        console.log(nextState)
+    }*/
 
     render(){
-        const { reviews } = this.props;
+        let { reviews } = this.props;
         return (
             <div>
               < Review reviews={reviews} />
@@ -31,7 +23,7 @@ class ReviewsList extends Component {
         )
     }
 }
-
+/*
 function mapStateToProps(state, ownProps){
     return {reviews: state.reviews}
 }
@@ -40,4 +32,5 @@ function mapDispatchToProps(dispatch){
     return {actions: bindActionCreators(reviewActions, dispatch)}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewsList);
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewsList);*/
+export default(ReviewsList)
