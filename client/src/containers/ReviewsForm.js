@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm, reset } from 'redux-form';
+import ReviewsList from './ReviewsList';
 
 async function submitToServer(data){
     try{
@@ -23,35 +24,38 @@ const submit = ({ user='', review='' }) =>{
 
 const ReviewsForm = (props) => {
     const { handleSubmit, reset} = props
-  return (
-    <form onSubmit={handleSubmit(submit)}>
-      <div>
-        <label>Name</label>
+    return (
         <div>
-          <Field
-            name="user"
-            component="input"
-            type="text"
-            placeholder="Name"
-          />
+            <form onSubmit={handleSubmit(submit)}>
+                <div>
+                    <label>Name</label>
+                    <div>
+                    <Field
+                        name="user"
+                        component="input"
+                        type="text"
+                        placeholder="Name"
+                    />
+                    </div>
+                </div>
+                <div>
+                    <label>Review</label>
+                    <div>
+                    <Field name="review" component="textarea" />
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">
+                    Submit
+                    </button>
+                    <button type="button" onClick={reset}>
+                    Clear Values
+                    </button>
+                </div>
+            </form>
+            < ReviewsList />
         </div>
-      </div>
-      <div>
-        <label>Review</label>
-        <div>
-          <Field name="review" component="textarea" />
-        </div>
-      </div>
-      <div>
-        <button type="submit">
-          Submit
-        </button>
-        <button type="button" onClick={reset}>
-          Clear Values
-        </button>
-      </div>
-    </form>
-  )
+    )
 }
 
 const afterSubmit = (reseult, dispatch) =>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import ReviewsDisplay from '../containers/ReviewsDisplay';
+import ReviewsForm from '../containers/ReviewsForm';
 
 class Landing extends React.Component {
 
@@ -12,7 +12,7 @@ class Landing extends React.Component {
         <Row>
           <Col lg={12}>
             Leave a review!
-            < ReviewsDisplay />
+            < ReviewsForm />
           </Col>
         </Row>
       </Grid>
