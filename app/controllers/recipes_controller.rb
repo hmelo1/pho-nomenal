@@ -9,4 +9,9 @@ class RecipesController < ApiController
     @recipe = Recipe.find(params[:id])
     render json: @recipes.to_json
   end
+  
+  def addLike
+    @recipe = Recipe.find(params[:id])
+    @recipe.increment!(:likes, 1)
+  end
 end
