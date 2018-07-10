@@ -4,14 +4,11 @@ class RecipesController < ApiController
     @reviews = Review.all
     render json: {recipes: @recipes.as_json, reviews: @reviews.as_json}
   end
-
-  def show
-    @recipe = Recipe.find(params[:id])
-    render json: @recipes.to_json
-  end
   
-  def addLike
-    @recipe = Recipe.find(params[:id])
+  def addLikes
+    @recipe = Recipe.find(params[:recipe_id])
     @recipe.increment!(:likes, 1)
+    @recipes = Recipe.all
+    render json: {recipes: @recipes.as_json}
   end
 end

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Col } from 'react-bootstrap'
+import LikeButton from './LikeButton'
 
 class RecipeList extends Component {
   render(){
@@ -16,7 +17,7 @@ class RecipeList extends Component {
           <div className="modal-body">
             {recipe.main_ingredient}<br />
             {recipe.meal_type} <br />
-            
+            < LikeButton recipe={recipe} />
           </div>
         </div>
       </Col>

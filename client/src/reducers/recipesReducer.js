@@ -11,6 +11,8 @@ export default function recipesReducer(state = initialState.recipes, action){
       return action.payload.filter(recipe => recipe.meal_type === "Special")
     case types.FETCH_BEVERAGES_SUCCESS:
       return action.payload.filter(recipe => recipe.meal_type === "Beverage")
+    case types.ADD_LIKES:
+      return action.payload
     default:
       return state
   }

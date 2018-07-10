@@ -48,7 +48,22 @@ export function fetchBeverages(){
     })
   }
 }
+
+function addLikeSuccess(payload) {
+  return {type: types.ADD_LIKES, payload: payload}
+}
+
+export function addLike(recipe){
+  return function(dispatch){
+    return recipeApi.addLike(recipe).then(recipesPayload => {
+      dispatch(addLikeSuccess(recipesPayload))
+    })
+  }
+}
 /*
+`.then(recipeLikes => {
+      dispatch(addLikeSuccess(recipeLikes))
+    })`
 export const FETCH_MEALS_SUCCESS =  'FETCH_MEALS_SUCCESS'
 export const FETCH_APPETIZERS_SUCCESS =  'FETCH_APPETIZERS_SUCCESS'
 export const FETCH_SPECIALS_SUCCESS =  'FETCH_SPECIALS_SUCCESS'
