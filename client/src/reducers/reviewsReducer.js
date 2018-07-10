@@ -6,7 +6,7 @@ export default function reviewsReducer(state = initialState.reviews, action){
     case types.FETCH_REVIEWS_SUCCESS:
       return action.payload.reverse()
     case types.ADD_REVIEWS:
-      return state.concat(action.review)
+      return action.payload.reverse()
     default:
       return state
   }

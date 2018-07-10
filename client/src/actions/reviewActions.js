@@ -13,6 +13,15 @@ export function fetchReviews(){
   }
 }
 
-export const addReview = review => {
-  return { type: 'ADD_REVIEW', review}
+
+export function addReviews(data){
+  return function(dispatch){
+    return reviewApi.addReviews(data).then(reviewsPayload => {
+      dispatch(addReviewSuccess(reviewsPayload))
+    })
+  }
+}
+
+function addReviewSuccess(payload){
+  return {type: types.ADD_REVIEWS, payload: payload}
 }

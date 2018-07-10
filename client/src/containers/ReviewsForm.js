@@ -5,57 +5,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as reviewActions from '../actions/reviewActions'
 
-/*
-
-
-*/
-
-async function submitToServer(data){
-    try{
-        let response = await fetch('api/reviews', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        let responseJson = await response.json();
-        return responseJson.reviews
-    } catch(error){
-        console.error(error);
-    }
-}
-
-
 class ReviewsForm extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.submit = this.submit.bind(this)
-
-        this.state={
-            reviews: []
-        }
     }
 
     componentWillMount() {
         this.props.actions.fetchReviews()
     }
 
-    componentWillReceiveProps(nextProps){
-        if(nextProps.reviews !== this.props.reviews){
-            this.setState({
-                reviews: nextProps.reviews
-            })
-        }
-    }
-
-    submit = ({ user='', review='' }) =>{
-        submitToServer({user, review}) 
-            .then((data) => {
-                this.setState({
-                    reviews: data.reverse()
-                })
-            })
+    submit = ({ user='', review='' }) => {
+        this.props.actions.addReviews({user, review});
     }
 
     render(){
@@ -81,7 +42,7 @@ class ReviewsForm extends React.Component{
                             className="form-control col-lg-12" 
                             name="review" 
                             component="textarea" 
-                            placeholder="Your Review"
+                            placeholder="What are your thoughts?"
                             rows="10"
                         />
                         <br />
@@ -96,7 +57,7 @@ class ReviewsForm extends React.Component{
                         </button>
                     </div>
                 </form>
-                < ReviewsList reviews={this.state.reviews}/>
+                < ReviewsList reviews={this.props.reviews}/>
             </div>
             
         )
