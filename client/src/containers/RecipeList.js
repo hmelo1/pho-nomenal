@@ -15,7 +15,8 @@ class RecipeList extends Component {
           </div>
           <div className="modal-body">
             {recipe.main_ingredient}<br />
-            {recipe.meal_type}
+            {recipe.meal_type} <br />
+            
           </div>
         </div>
       </Col>
